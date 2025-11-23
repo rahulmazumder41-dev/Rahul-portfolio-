@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rahul Mazumder | Service Desk Analyst (L1/L2)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio website of Rahul Mazumder, Service Desk Analyst (L1/L2) with expertise in IT support, Microsoft 365, Active Directory, Azure AD and Windows troubleshooting." />
+  <style>
+    :root {
+      --bg: #0b1120;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.1);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --pill: #111827;
+      --shadow: 0 18px 45px rgba(15,23,42,0.75);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d283a 0, #020617 50%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 32px auto 48px;
+      padding: 0 16px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 26px;
+    }
+
+    .name-block {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, #22d3ee, #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 22px;
+      color: white;
+      box-shadow: 0 12px 30px rgba(37,99,235,0.6);
+    }
+
+    h1 {
+      font-size: 28px;
+      letter-spacing: 0.03em;
+    }
+
+    .title {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .meta {
+      text-align: right;
+      font-size: 14px;
+    }
+
+    .meta div {
+      color: var(--muted);
+    }
+
+    .meta strong {
+      color: var(--text);
+    }
+
+    .tagline {
+      margin: 10px 0 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 6px 0 20px;
+    }
+
+    .chip {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.35);
+      background: linear-gradient(145deg, rgba(15,23,42,0.9), rgba(15,23,42,0.2));
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #cbd5f5;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.09), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(129,140,248,0.10), transparent 60%),
+                  var(--card);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148,163,184,0.25);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(56,189,248,0.06), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .card-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #9ca3ff;
+      margin-bottom: 10px;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, rgba(148,163,184,0.5), transparent);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bullet {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .bullet-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      border-radius: var(--radius-pill);
+      background: var(--pill);
+      border: 1px solid rgba(55,65,81,0.9);
+      padding: 4px 10px;
+      color: #d1d5db;
+    }
+
+    .pill.accent {
+      background: var(--accent-soft);
+      border-color: rgba(56,189,248,0.8);
+      color: #e0f2fe;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 20px;
+    }
+
+    .section-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .experience-item {
+      margin-bottom: 8px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .company {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .period {
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .location {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    .link-pill {
+      background: var(--pill);
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.5);
+      padding: 4px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    small {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 860px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .meta {
+        text-align: left;
+      }
+      .page {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <header>
+    <div>
+      <div class="name-block">
+        <div class="avatar">RM</div>
+        <div>
+          <h1>Rahul Mazumder</h1>
+          <div class="title">Service Desk Analyst (L1/L2) · IT Support & Operations</div>
+        </div>
+      </div>
+      <p class="tagline">
+        IT support professional specialising in Windows, Microsoft 365, Active Directory, Azure AD,
+        and enterprise application support, with a strong record in CSAT, FCR, and stakeholder appreciation.
+      </p>
+      <div class="chips">
+        <span class="chip">IT Service Desk</span>
+        <span class="chip">Windows 10/11</span>
+        <span class="chip">Microsoft 365</span>
+        <span class="chip">Active Directory</span>
+        <span class="chip">Azure AD</span>
+        <span class="chip">SAP GUI</span>
+        <span class="chip">MFA & ITSM</span>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div><strong>Kolkata, India · 700113</strong></div>
+      <div>📞 +91‑6290532107</div>
+      <div>✉️ <a href="mailto:rahulmazumder41@gmail.com">rahulmazumder41@gmail.com</a></div>
+      <div>🔗 <a href="https://linkedin.com/in/rahul-mazumder-6a8494215" target="_blank">LinkedIn Profile</a></div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Left column -->
+    <section class="card">
+      <div class="card-inner">
+        <div class="two-col">
+          <!-- Summary + Skills -->
+          <div>
+            <h2>Summary</h2>
+            <div class="divider"></div>
+            <p>
+              Service Desk Analyst (L1/L2) with hands‑on experience delivering end‑to‑end technical support
+              across hardware, software, networking, and enterprise productivity tools. Consistently
+              achieves high CSAT and FCR by combining structured troubleshooting with clear, user‑friendly communication.
+            </p>
+            <p>
+              Skilled in managing accounts and access in Active Directory and Azure AD, supporting Microsoft 365
+              (Exchange Online, Teams, SharePoint), performing system log analysis, registry edits, and GPO checks,
+              and resolving VPN, printer, and server‑mapping issues in enterprise environments.
+            </p>
+
+            <h2>Technical Skills</h2>
+            <div class="divider"></div>
+
+            <div class="section-title-row">
+              <div class="subtitle">Core Platforms & Directory Services</div>
+            </div>
+            <div class="pill-row">
+              <span class="pill accent">Active Directory (AD)</span>
+              <span class="pill accent">Azure AD</span>
+              <span class="pill">Group Policy (GPO)</span>
+              <span class="pill">User & Group Management</span>
+            </div>
+
+            <div class="section-title-row">
+              <div class="subtitle">Productivity & Applications</div>
+            </div>
+            <div class="pill-row">
+              <span class="pill accent">Microsoft 365 Support</span>
+              <span class="pill">Exchange Online</span>
+              <span class="pill">Microsoft Teams</span>
+              <span class="pill">SharePoint</span>
+              <span class="pill">SAP GUI (Config & Password Resets)</span>
+            </div>
+
+            <div class="section-title-row">
+              <div class="subtitle">Operating Systems & Diagnostics</div>
+            </div>
+            <div class="pill-row">
+              <span class="pill accent">Windows 10</span>
+              <span class="pill accent">Windows 11</span>
+              <span class="pill">Registry Edits</span>
+              <span class="pill">System Log Analysis</span>
+              <span class="pill">Advanced Troubleshooting</span>
+            </div>
+
+            <div class="section-title-row">
+              <div class="subtitle">Security, ITSM & Infrastructure</div>
+            </div>
+            <div class="pill-row">
+              <span class="pill accent">Multi‑Factor Authentication (MFA)</span>
+              <span class="pill">ITSM / Ticketing Platforms</span>
+              <span class="pill">Printer Configuration</span>
+              <span class="pill">Server Mapping</span>
+              <span class="pill">VPN Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div>
+            <h2>Experience</h2>
+            <div class="divider"></div>
+
+            <div class="experience-item">
+              <div class="experience-header">
+                <div>
+                  <div class="role">Service Desk Analyst (L1/L2)</div>
+                  <div class="company">Microland Limited</div>
+                </div>
+                <div class="period">Nov 2023 – Present</div>
+              </div>
+              <div class="location">Bangalore, India</div>
+              <ul>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Provide comprehensive L1 and L2 technical support to end‑users across
+                    hardware, software, and complex connectivity issues in a fast‑paced
+                    enterprise environment.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Manage user accounts, permissions, and group memberships in Active Directory
+                    and Azure AD; support onboarding, role changes, and access reviews.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Serve as a point of contact for Microsoft 365 applications, resolving
+                    incidents related to Exchange Online, Teams, and SharePoint with minimal
+                    escalation.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Perform advanced diagnostics including system log analysis, GPO verification,
+                    and targeted registry edits to restore functionality and reduce repeat tickets.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Deliver critical application support such as SAP password resets and
+                    basic SAP GUI configuration for end‑users.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Own end‑user operations including printer configuration and installation,
+                    VPN access troubleshooting, and network drive / server mapping.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Maintain Customer Satisfaction (CSAT) of 95%+ and consistently meet
+                    strict Service Level Agreements (SLAs), reflecting strong service
+                    ownership and responsiveness.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Achieve an average First Contact Resolution (FCR) rate of 80%, reducing
+                    ticket backlog and improving user experience through effective first‑line
+                    triage and resolution.
+                  </span>
+                </li>
+                <li class="bullet">
+                  <span class="bullet-dot"></span>
+                  <span>
+                    Receive ~20+ appreciation emails in a month from end‑users and
+                    stakeholders, recognising prompt support, problem‑solving skills,
+                    and professional behaviour.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right column -->
+    <section class="card">
+      <div class="card-inner">
+        <h2>Education</h2>
+        <div class="divider"></div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Bachelor of Computer Application</div>
+              <div class="company">Institute of Engineering & Management</div>
+            </div>
+            <div class="period">Dec 2023</div>
+          </div>
+          <div class="location">Kolkata, West Bengal, India · GPA: 8.04</div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Higher Secondary Education · Computer Science</div>
+              <div class="company">Ramakrishna Vivekananda Mission</div>
+            </div>
+            <div class="period">Nov 2019 – Dec 2020</div>
+          </div>
+          <div class="location">GPA: 80%</div>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div>
+              <div class="role">Indian Certificate of Secondary Education</div>
+              <div class="company">Ramakrishna Vivekananda Mission</div>
+            </div>
+            <div class="period">Dec 2018</div>
+          </div>
+          <div class="location">GPA: 69%</div>
+        </div>
+
+        <h2>Certifications</h2>
+        <div class="divider"></div>
+        <ul>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>ITIL V4 Foundation (Certified)</span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>CompTIA A+ (In Progress)</span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>Introduction to SOC (Cisco)</span>
+          </li>
+        </ul>
+
+        <h2>Projects</h2>
+        <div class="divider"></div>
+        <ul>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              <strong>Heart Disease Prediction</strong> – Implemented a machine learning model in Python
+              to predict heart disease risk using clinical features, exploring data preprocessing,
+              feature selection, and classification algorithms.
+            </span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              <strong>Smart Agriculture Using IoT</strong> – Built an IoT‑based solution using sensors,
+              AI/ML, and Python to monitor agricultural parameters and support data‑driven decision‑making
+              for crop management.
+            </span>
+          </li>
+        </ul>
+
+        <h2>Accomplishments</h2>
+        <div class="divider"></div>
+        <ul>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              Demonstrated leadership by mentoring new team members on standard operating procedures
+              and advanced troubleshooting flows on the service desk.
+            </span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              TCS NQT 2022: Scored 75%.
+            </span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              First place in Gaming Tournament, IEM NIRAVANA 2022.
+            </span>
+          </li>
+          <li class="bullet">
+            <span class="bullet-dot"></span>
+            <span>
+              Served as Class Captain from Class 5 to 10.
+            </span>
+          </li>
+        </ul>
+
+        <h2>Languages</h2>
+        <div class="divider"></div>
+        <div class="pill-row">
+          <span class="pill accent">English – Proficient</span>
+          <span class="pill">Bengali – Proficient</span>
+          <span class="pill">Hindi – Beginner</span>
+        </div>
+
+        <h2>Interests</h2>
+        <div class="divider"></div>
+        <div class="pill-row">
+          <span class="pill">Travelling</span>
+          <span class="pill">Playing Football</span>
+          <span class="pill">Swimming</span>
+          <span class="pill">Gaming</span>
+        </div>
+
+        <h2>Personal</h2>
+        <div class="divider"></div>
+        <p>Date of Birth: 01/12/2002</p>
+
+        <div class="link-row">
+          <span class="link-pill">
+            <span>📥</span>
+            <a href="#" onclick="alert('Replace this link with your hosted resume PDF URL'); return false;">
+              Download Resume (PDF)
+            </a>
+          </span>
+          <span class="link-pill">
+            <span>💼</span>
+            <a href="https://linkedin.com/in/rahul-mazumder-6a8494215" target="_blank">
+              View LinkedIn
+            </a>
+          </span>
+        </div>
+
+        <br>
+        <small>
+          Note: For privacy on a public site, you can optionally hide your full phone number
+          or date of birth, or replace them with city & email only.
+        </small>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Rahul Mazumder · Designed as a portfolio version of my resume.
+  </footer>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
